@@ -36,3 +36,52 @@ public class StudentManagement {
             System.out.println("Invalid date format. Use dd/MM/yyyy.");
         }
     }
+
+     // Method to display all students
+    public void displayAllStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students found.");
+        } else {
+            for (Student student : students) {
+                student.displayStudent();
+            }
+        }
+    }
+
+    // Search student by PRN
+    public void searchByPRN() {
+        System.out.print("Enter PRN to search: ");
+        String prn = scanner.next();
+        for (Student student : students) {
+            if (student.getPRN().equals(prn)) {
+                student.displayStudent();
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
+    // Search student by Name
+    public void searchByName() {
+        System.out.print("Enter Name to search: ");
+        scanner.nextLine(); // Consume newline
+        String name = scanner.nextLine();
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                student.displayStudent();
+                return;
+            }
+        }
+        System.out.println("Student not found.");
+    }
+
+    // Search student by position in the list
+    public void searchByPosition() {
+        System.out.print("Enter position (index starting from 0): ");
+        int index = scanner.nextInt();
+        if (index >= 0 && index < students.size()) {
+            students.get(index).displayStudent();
+        } else {
+            System.out.println("Invalid position.");
+        }
+    }
