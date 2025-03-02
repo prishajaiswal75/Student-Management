@@ -11,3 +11,22 @@ public class Student {
         this.dob = dob;
         this.marks = marks;
     }
+
+     // Getter and Setter methods for encapsulation
+    public String getPRN() { return prn; }
+    public void setPRN(String prn) { this.prn = prn; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public Date getDOB() { return dob; }
+    public void setDOB(Date dob) { this.dob = dob; }
+
+    public double getMarks() { return marks; }
+    public void setMarks(double marks) { this.marks = marks; }
+    
+    // Method to display student details
+    public void displayStudent() {
+        System.out.println("PRN: " + prn + ", Name: " + name + ", DOB: " + dob + ", Marks: " + marks);
+    }
+}
