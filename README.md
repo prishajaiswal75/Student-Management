@@ -32,13 +32,6 @@ Feature	Description
 7. Delete Student	Deletes a student record using PRN
 8. Exit	Closes the application
 
-Student-Management-Java/
-│── README.md          # Documentation
-│── Student.java       # Defines the Student class
-│── StudentManagement.java  # Handles all student operations
-│── Main.java          # Menu-driven main program
-└── .gitignore         # Ignore unnecessary files when pushing to GitHub
-
 Code Explanation
 1. Student.java
 Defines the Student class with attributes:
